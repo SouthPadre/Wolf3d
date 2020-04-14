@@ -642,27 +642,7 @@ sector.h
 player.h
 ../includes/player.h
 
-C:/Users/OUT-Takzhanov-AA/CLionProjects/Wolf3d/sources/DrawScreen.c
-wolf3d.h
--
-
-C:/Users/OUT-Takzhanov-AA/CLionProjects/Wolf3d/sources/LoadData.c
-wolf3d.h
--
-
-C:/Users/OUT-Takzhanov-AA/CLionProjects/Wolf3d/sources/MovePlayer.c
-wolf3d.h
--
-
-C:/Users/OUT-Takzhanov-AA/CLionProjects/Wolf3d/sources/UnloadData.c
-wolf3d.h
--
-
-C:/Users/OUT-Takzhanov-AA/CLionProjects/Wolf3d/sources/main.c
-wolf3d.h
--
-
-C:/Users/OUT-Takzhanov-AA/CLionProjects/Wolf3d/sources/vline.c
+/home/sasha/Downloads/wolf/sources/LoadData.c
 wolf3d.h
 -
 

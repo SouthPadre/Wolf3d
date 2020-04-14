@@ -1,13 +1,11 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Wolf3d.dir/sources/DrawScreen.c.obj"
-  "CMakeFiles/Wolf3d.dir/sources/LoadData.c.obj"
-  "CMakeFiles/Wolf3d.dir/sources/MovePlayer.c.obj"
-  "CMakeFiles/Wolf3d.dir/sources/UnloadData.c.obj"
-  "CMakeFiles/Wolf3d.dir/sources/main.c.obj"
-  "CMakeFiles/Wolf3d.dir/sources/vline.c.obj"
-  "Wolf3d.exe"
-  "Wolf3d.exe.manifest"
-  "Wolf3d.lib"
+  "CMakeFiles/Wolf3d.dir/sources/DrawScreen.c.o"
+  "CMakeFiles/Wolf3d.dir/sources/LoadData.c.o"
+  "CMakeFiles/Wolf3d.dir/sources/MovePlayer.c.o"
+  "CMakeFiles/Wolf3d.dir/sources/UnloadData.c.o"
+  "CMakeFiles/Wolf3d.dir/sources/main.c.o"
+  "CMakeFiles/Wolf3d.dir/sources/vline.c.o"
+  "Wolf3d"
   "Wolf3d.pdb"
 )
 

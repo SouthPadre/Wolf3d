@@ -4,17 +4,18 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/Users/OUT-Takzhanov-AA/CLionProjects/Wolf3d/sources/DrawScreen.c" "C:/Users/OUT-Takzhanov-AA/CLionProjects/Wolf3d/cmake-build-debug/CMakeFiles/Wolf3d.dir/sources/DrawScreen.c.obj"
-  "C:/Users/OUT-Takzhanov-AA/CLionProjects/Wolf3d/sources/LoadData.c" "C:/Users/OUT-Takzhanov-AA/CLionProjects/Wolf3d/cmake-build-debug/CMakeFiles/Wolf3d.dir/sources/LoadData.c.obj"
-  "C:/Users/OUT-Takzhanov-AA/CLionProjects/Wolf3d/sources/MovePlayer.c" "C:/Users/OUT-Takzhanov-AA/CLionProjects/Wolf3d/cmake-build-debug/CMakeFiles/Wolf3d.dir/sources/MovePlayer.c.obj"
-  "C:/Users/OUT-Takzhanov-AA/CLionProjects/Wolf3d/sources/UnloadData.c" "C:/Users/OUT-Takzhanov-AA/CLionProjects/Wolf3d/cmake-build-debug/CMakeFiles/Wolf3d.dir/sources/UnloadData.c.obj"
-  "C:/Users/OUT-Takzhanov-AA/CLionProjects/Wolf3d/sources/main.c" "C:/Users/OUT-Takzhanov-AA/CLionProjects/Wolf3d/cmake-build-debug/CMakeFiles/Wolf3d.dir/sources/main.c.obj"
-  "C:/Users/OUT-Takzhanov-AA/CLionProjects/Wolf3d/sources/vline.c" "C:/Users/OUT-Takzhanov-AA/CLionProjects/Wolf3d/cmake-build-debug/CMakeFiles/Wolf3d.dir/sources/vline.c.obj"
+  "/home/sasha/Downloads/wolf/sources/DrawScreen.c" "/home/sasha/Downloads/wolf/cmake-build-debug/CMakeFiles/Wolf3d.dir/sources/DrawScreen.c.o"
+  "/home/sasha/Downloads/wolf/sources/LoadData.c" "/home/sasha/Downloads/wolf/cmake-build-debug/CMakeFiles/Wolf3d.dir/sources/LoadData.c.o"
+  "/home/sasha/Downloads/wolf/sources/MovePlayer.c" "/home/sasha/Downloads/wolf/cmake-build-debug/CMakeFiles/Wolf3d.dir/sources/MovePlayer.c.o"
+  "/home/sasha/Downloads/wolf/sources/UnloadData.c" "/home/sasha/Downloads/wolf/cmake-build-debug/CMakeFiles/Wolf3d.dir/sources/UnloadData.c.o"
+  "/home/sasha/Downloads/wolf/sources/main.c" "/home/sasha/Downloads/wolf/cmake-build-debug/CMakeFiles/Wolf3d.dir/sources/main.c.o"
+  "/home/sasha/Downloads/wolf/sources/vline.c" "/home/sasha/Downloads/wolf/cmake-build-debug/CMakeFiles/Wolf3d.dir/sources/vline.c.o"
   )
-set(CMAKE_C_COMPILER_ID "MSVC")
+set(CMAKE_C_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
+  "/usr/include/SDL2"
   "../includes"
   )
 

@@ -4,7 +4,7 @@
 
 #include <wolf3d.h>
 
-static void LoadData()
+void LoadData()
 {
     FILE *restrict fp = fopen("map-clear.txt", "rt");
     if(!fp) { perror("map-clear.txt"); exit(1); }
