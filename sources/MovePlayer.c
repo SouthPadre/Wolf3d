@@ -8,8 +8,11 @@
 /* MovePlayer(dx,dy): Moves the player by (dx,dy) in the map, and
  * also updates their anglesin/anglecos/sector properties properly.
  */
-void MovePlayer(const float dx, const float dy)
+void MovePlayer(const float dx, const float dy, struct sector *sectorS, struct player *playerS)
 {
+    struct player player = *playerS;
+    struct sector *sectors = sectorS;
+
     const float px = player.where.x, py = player.where.y;
     /* Check if this movement crosses one of this sector's edges
      * that have a neighboring sector on the other side.
@@ -32,4 +35,5 @@ void MovePlayer(const float dx, const float dy)
     player.where.y += dy;
     player.anglesin = sinf(player.angle);
     player.anglecos = cosf(player.angle);
+    *playerS = player;
 }

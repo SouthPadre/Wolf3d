@@ -2,7 +2,12 @@
 
 int main()
 {
-    LoadData();
+    struct sector *sectors = NULL;
+    struct player player;
+    SDL_Surface *restrict surface = NULL;
+
+    unsigned NumSectors = 0;
+    sectors = LoadData(&NumSectors, NULL, &player);
 
     if (SDL_Init(SDL_INIT_VIDEO) < 0) {
         fprintf(stderr, "SDL video init failed: %s\n", SDL_GetError());
@@ -34,7 +39,7 @@ int main()
     for(;;)
     {
         SDL_LockSurface(surface);
-        DrawScreen();
+        DrawScreen(&NumSectors, sectors, &player, &surface);
         SDL_UnlockSurface(surface);
         //SDL_Flip(surface);
         SDL_UpdateTexture(texture, NULL, surface->pixels, surface->pitch);
@@ -98,7 +103,7 @@ int main()
                         moving = 0;
                     }
                 }
-            MovePlayer(dx, dy);
+            MovePlayer(dx, dy, sectors, &player);
             falling = 1;
         }
 
@@ -132,7 +137,7 @@ int main()
         player.angle += x * 0.03f;
         yaw	= clamp(yaw - y*0.05f, -5, 5);
         player.yaw   = yaw - player.velocity.z*0.5f;
-        MovePlayer(0,0);
+        MovePlayer(0,0, sectors, &player);
 
         float move_vec[2] = {0.f, 0.f};
         if(wsad[0]) { move_vec[0] += player.anglecos*0.2f; move_vec[1] += player.anglesin*0.2f; }
@@ -150,7 +155,7 @@ int main()
         SDL_Delay(10);
     }
     done:
-    UnloadData();
+    UnloadData(&NumSectors, sectors);
     SDL_DestroyTexture(texture); texture=NULL;
     SDL_DestroyRenderer(renderer); renderer=NULL;
     SDL_DestroyWindow(window); window=NULL;

@@ -15,8 +15,8 @@
 #include "sector.h"
 #include "player.h"
 
-static SDL_Surface *restrict surface = NULL;
-static unsigned NumSectors = 0;
+//static SDL_Surface *restrict surface = NULL;
+//static unsigned NumSectors = 0;
 
 /* Define window size */
 #define W 608
@@ -49,10 +49,10 @@ static unsigned NumSectors = 0;
 	vxs(vxs(x1,y1, x2,y2), (x1)-(x2), vxs(x3,y3, x4,y4), (x3)-(x4)) / vxs((x1)-(x2), (y1)-(y2), (x3)-(x4), (y3)-(y4)), \
 	vxs(vxs(x1,y1, x2,y2), (y1)-(y2), vxs(x3,y3, x4,y4), (y3)-(y4)) / vxs((x1)-(x2), (y1)-(y2), (x3)-(x4), (y3)-(y4)) })
 
-void LoadData();
-void MovePlayer(const float dx, const float dy);
+struct sector * LoadData();
+void MovePlayer(const float dx, const float dy, struct sector *sectorS, struct player *playerS);
 void DrawScreen();
 void UnloadData();
-void vline(const int x, int y1,int y2, const int top, const int middle, const int bottom);
+void vline(const int x, int y1,int y2, const int top, const int middle, const int bottom, SDL_Surface **restrict surface);
 
 #endif //WOLF3D_WOLF3D_H

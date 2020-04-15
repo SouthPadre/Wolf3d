@@ -5,9 +5,9 @@
 
 /* vline: Draw a vertical line on screen, with a different color pixel in top & bottom */
 
-void vline(const int x, int y1,int y2, const int top, const int middle, const int bottom)
+void vline(const int x, int y1,int y2, const int top, const int middle, const int bottom, SDL_Surface **restrict surface)
 {
-    int *const restrict pix = surface->pixels;
+    int *const restrict pix = (*surface)->pixels;
     y1 = clamp(y1, 0, H-1);
     y2 = clamp(y2, 0, H-1);
     if(y2 == y1)

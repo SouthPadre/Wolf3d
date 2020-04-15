@@ -4,8 +4,11 @@
 
 #include <wolf3d.h>
 
-void LoadData()
+struct sector * LoadData(unsigned *NumSectorsS, struct sector *sectorS, struct player *playerS)
 {
+    struct player player = *playerS;
+    struct sector* sectors = sectorS;
+    unsigned NumSectors = *NumSectorsS;
     FILE *restrict fp = fopen("map-clear.txt", "rt");
     if(!fp) { perror("map-clear.txt"); exit(1); }
     char Buf[256], word[256], *ptr;
@@ -23,7 +26,7 @@ void LoadData()
                 { vert = realloc(vert, ++NumVertices * sizeof(*vert)); vert[NumVertices-1] = v; }
                 break;
             case 's': // sector
-                sectors = realloc(sectors, ++NumSectors * sizeof(*sectors));
+                sectors = realloc(sectors, ++NumSectors * sizeof(struct sector));
                 struct sector *const restrict sect = &sectors[NumSectors-1];
                 int *restrict num = NULL;
                 sscanf(ptr += n, "%f%f%n", &sect->floor,&sect->ceil, &n);
@@ -43,6 +46,9 @@ void LoadData()
                 player = (struct player) { {v.x, v.y, 0}, {0,0,0}, angle,0,0,0, n }; // TODO: Range checking
                 player.where.z = sectors[player.sector].floor + EyeHeight;
         }
+    *NumSectorsS = NumSectors;
+    *playerS = player;
     fclose(fp);
     free(vert), vert=NULL;
+    return sectors;
 }
